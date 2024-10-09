@@ -57,8 +57,7 @@ function eliminateTeam(teams) {
 }
 console.log(eliminateTeam(["Brazil", "Germany", "Italy"]));
 
-//challeng 1
-
+//*🌶CHALLENGE 1 🌶*
 /**
  * secondHalfOfArrayIfItIsEven(fruits):
  * - receives array `fruits`
@@ -70,10 +69,28 @@ console.log(eliminateTeam(["Brazil", "Germany", "Italy"]));
  * secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi", "blueberry"]) -> []
  */
 function secondHalfOfArrayIfItIsEven(fruits) {
-  // Your code here
+  if (fruits.length % 2 === 0) {
+    const halfIndex = fruits.length / 2;
+
+    return fruits.slice(halfIndex);
+  } else {
+    return [];
+  }
 }
 
-//challeng 2
+console.log(secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi"]));
+
+console.log(
+  secondHalfOfArrayIfItIsEven([
+    "apple",
+    "orange",
+    "banana",
+    "kiwi",
+    "blueberry",
+  ])
+);
+
+//*🌶🌶🌶CHALLENGE 2* 🌶🌶🌶
 
 /**
  * youGottaCalmDown(shout):
@@ -90,5 +107,17 @@ function secondHalfOfArrayIfItIsEven(fruits) {
  * - Use string method .slice()
  */
 function youGottaCalmDown(shout) {
-  // Your code here
+  const exclamationIndex = shout.indexOf("!");
+
+  if (exclamationIndex !== -1) {
+    return shout.slice(0, exclamationIndex + 1);
+  } else {
+    return shout;
+  }
 }
+
+console.log(`"${youGottaCalmDown("HI!!!!!!!!!!")}"`);
+
+console.log(`"${youGottaCalmDown("Taylor Schwift!!!!!!!!!!!")}"`);
+
+console.log(`"${youGottaCalmDown("Hellooooo")}"`);
